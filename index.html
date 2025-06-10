@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Saya - Halaman Utama</title>
+  <link rel="icon" type="image/png" href="logoblog(1).png" sizes="32x32">
+
+  <!-- Bootstrap CSS untuk desain responsif -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="app.js"></script>
+
+  <!-- CSS tambahan untuk styling khusus -->
+  <style>
+    /* Background header agar lebih modern dan menarik */
+    .header-custom {
+      background: linear-gradient(to right, #007bff, #6610f2); /* gradasi warna */
+      transition: all 0.5s ease; /* transisi halus */
+      position: sticky; /* agar tetap di atas saat scroll */
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* Class tambahan untuk menghilangkan header saat scroll */
+    .header-hidden {
+      opacity: 0;
+      filter: blur(5px);
+      pointer-events: none;
+    }
+
+    /* Menyesuaikan tinggi gambar pada kartu dan memastikan gambar proporsional */
+    .card-img-top {
+      height: 300px;
+      object-fit: cover;
+    }
+
+    /* Efek hover pada kartu agar tampak timbul */
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <!-- Header: Judul dan deskripsi singkat blog -->
+  <header class="header-custom text-white text-center py-3 shadow"> <!-- Gradasi warna, teks putih, tengah, padding vertikal, bayangan -->
+    <div class="container"> <!-- Membungkus konten header -->
+      <h1 class="display-4 fw-bold">Blog Teknologi</h1> <!-- Judul besar dan tebal -->
+      <p class="lead">Berita dan artikel seputar dunia teknologi terkini</p> <!-- Subjudul -->
+    </div>
+  </header>
+
+  <!-- Konten utama: Daftar artikel -->
+  <main class="container my-4"> <!-- Container Bootstrap dengan margin vertikal -->
+    <div class="row"> <!-- Baris untuk grid artikel -->
+
+      <!-- Kartu artikel 1 -->
+      <div class="col-md-6 mb-4"> <!-- Kolom medium 6, margin bawah -->
+        <div class="card h-100"> <!-- Kartu penuh tinggi -->
+          <img src="https://fahum.umsu.ac.id/blog/wp-content/uploads/2025/01/apa-itu-ai-berikut-pengertian-kelebihan-kekurangan-dan-penerapannya-dalam-kehidupan.jpg" class="card-img-top" alt="Gambar Artikel 1">
+          <div class="card-body">
+            <h5 class="card-title">10 Pekerjaan yang aman dari ancaman AI</h5>
+            <p class="card-text">Jakarta - kecerdasan buatan atau artificial intelligence (AI) telah berimbas ke berbagai industri... </p>
+            <a href="detail.html" class="btn btn-primary">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kartu artikel 2 -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <img src="https://img.antaranews.com/cache/1200x800/2025/05/01/WhatsApp-Image-2025-05-01-at-14.51.38.jpeg.webp" class="card-img-top" alt="Gambar Artikel 2">
+          <div class="card-body">
+            <h5 class="card-title">Xpeng pamerkan robot humanoid Iron di Shanghai Auto Show 2025</h5>
+            <p class="card-text">Jakarta - Dalam pameran Shanghai Auto Show 2025, perusahaan lokal asal China yakni Xpeng pamerkan robot humanoid Iron... </p>
+            <a href="detail2.html" class="btn btn-primary">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kartu artikel 3 -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <img src="https://img.antaranews.com/cache/1200x800/2024/05/12/2024-01-05T214415Z_4_LYNXMPEK040NW_RTROPTP_4_MICROSOFT-OUTAGES.jpg.webp" class="card-img-top" alt="Gambar Artikel 3">
+          <div class="card-body">
+            <h5 class="card-title">Microsoft bukukan pendapatan Rp1,16 kuadriliun pada Q3 2025</h5>
+            <p class="card-text">Jakarta - Microsoft mengumumkan pendapatan sebesar 70,1 miliar dolar AS atau sekitar Rp1,16 kuadriliun... </p>
+            <a href="detail3.html" class="btn btn-primary">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kartu artikel 4 -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <img src="https://cdn.rri.co.id/berita/Bandar_Lampung/o/1719031734990-maxresdefault_41/i9u8odysrbglpvh.jpeg" class="card-img-top" alt="Gambar Artikel 4">
+          <div class="card-body">
+            <h5 class="card-title">Google akan memungkinkan anak mengakses aplikasi Gemini AI</h5>
+            <p class="card-text">Jakarta - Google akan memungkinkan anak-anak mengakses aplikasi Gemini AI di perangkat Android... </p>
+            <a href="detail4.html" class="btn btn-primary">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer: bagian bawah halaman -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 Blog Teknologi Terbaru</p>
+  </footer>
+
+  <!-- Script untuk efek scroll pada header -->
+  <script>
+    const header = document.querySelector('.header-custom');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('header-hidden'); // Tambah efek blur+fade
+      } else {
+        header.classList.remove('header-hidden'); // Hapus efek jika scroll ke atas
+      }
+    });
+  </script>
+
+<output> </output>
+
+</body>
+</html>

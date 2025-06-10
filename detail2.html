@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Artikel - Blog Teknologi</title>
+
+  <!-- Bootstrap CSS untuk desain responsif -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS tambahan untuk styling khusus -->
+  <style>
+    /* Background header agar lebih modern dan menarik */
+    .header-custom {
+      background: linear-gradient(to right, #007bff, #6610f2); /* gradasi warna */
+      transition: all 0.5s ease; /* transisi halus */
+      position: sticky; /* agar tetap di atas saat scroll */
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* Class tambahan untuk menghilangkan header saat scroll */
+    .header-hidden {
+      opacity: 0;
+      filter: blur(5px);
+      pointer-events: none;
+    }
+
+    /* Class untuk memberi jarak antar elemen */
+    .jarak {
+      margin-bottom: 20px;
+    }
+
+    /* Class untuk membuat paragraf rata kanan-kiri */
+    .rata-justify {
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header: Judul dan deskripsi singkat blog -->
+  <header class="header-custom text-white text-center py-3 shadow"> <!-- Gradasi warna, teks putih, tengah, padding vertikal, bayangan -->
+    <div class="container"> <!-- Membungkus konten header -->
+      <h1 class="display-4 fw-bold">Blog Teknologi</h1> <!-- Judul besar dan tebal -->
+      <p class="lead">Detail Artikel</p> <!-- Subjudul -->
+    </div>
+  </header>
+
+  <!-- Konten Artikel -->
+  <main class="container my-4"> <!-- Konten utama dalam container Bootstrap, margin vertikal 4 -->
+    <!-- Judul artikel -->
+    <h2>Xpeng pamerkan robot humanoid Iron di Shanghai Auoto Show 2025</h2>
+    
+    <!-- Gambar artikel responsif -->
+    <img src="https://img.antaranews.com/cache/1200x800/2025/05/01/WhatsApp-Image-2025-05-01-at-14.51.38.jpeg.webp" class="img-fluid mb-3" alt="Gambar Artikel">
+    
+    <!-- Informasi penulis dan tanggal -->
+    <p class="text-muted">Ditulis oleh Admin | 2 Mei 2025</p> <!-- Paragraf dengan teks berwarna abu-abu terang -->
+
+    <!-- Isi artikel, paragraf pertama diberi jarak bawah dan rata kanan-kiri -->
+    <p class="jarak rata-justify">
+        Jakarta - Dalam pameran Shanghai Auto Show 2025, perusahaan lokal asal China yakni Xpeng pamerkan robot humanoid Iron terbarunya yang sudah menggunakan Chip AI dan diklaim
+        membantu memproduksi kendaraan milik Xpeng. CarnewsChina pada Kamis mengabarkan bahwa robot ini sudah dibekali dengan 60 sendi, 200 derajat kebebasan, dan daya pemrosesan 
+        yang mencapai 3.000 TOPS sehingga hal tersebut sangat mengagumkan. Robot humanoid iron ini memiliki dimensi 1.73 meter dengan berat mencapai 70 kilogram sehingga Iron ini 
+        dirancang sangat menyerupai manusia. Tangannya, yang dibuat dengan skala 1:1 dengan 22 derajat kebebasan sangat memungkinkan gaya robot ini dapat menyerupai fleksiilitas manusia.
+    </p>
+
+    <!-- Paragraf lanjutan -->
+    <p class="rata-justify">
+        Pabrikan tersebut melahirkan robot ini yang sudah disesuaikan dengan manusia berkat dorongan dari teknologi end to end milik Xpeng, sehingga, kekakuan dari robot ini sudah 
+        tidak seperti robot pada umumnya. Sistem interaksi dari suara Iron yang diadaptasi dari kokpit pintar Xpeng, memungkinkan percakapan alami melalui penalaran aktif dan pemikiran 
+        logis. Sistem ini juga mengintegrasikan teknologi mengemudi otonom Xpeng, menggunakan sistem AI inti yang sama dengan kendaraan listrik merek tersebut yang dapat menjembatani 
+        kesenjangan antara ekosistem otomotif dan robotik.
+    </p>
+    
+    <!-- Paragraf lanjutan -->
+    <p class="rata-justify">
+      Xpeng menjalani Iron ini dengan menggunakan chip AI Turing milik Xpeng dan sistem perangkat lunak AIOS Tianji. Bersama-sama, keduanya menyediakan kecerdasan tingkat lanjut untuk 
+      persepsi, gerakan, dan interaksi. Dalam sistem penglihatannya, robot ini sudah menggunakan kamera canggih yakni “Eagle Eye” yang dapat memastikan kesadaran lingkungan dan kemampuan 
+      untuk mengambil keputusan yang tepat. Menurut Xpeng, Iron mewakili visinya untuk masa depan di mana mobilitas cerdas dan robotika pintar menyatu secara mendalam. Perusahaan 
+      membayangkan Iron sebagai asisten pribadi, yang menangani tugas-tugas seperti manajemen dan layanan pelanggan di area ritel, kantor, dan bahkan rumah.
+    </p>
+
+    <!-- Tombol kembali ke halaman utama -->
+    <a href="index.html" class="btn btn-secondary">Kembali ke Beranda</a>
+  </main>
+
+  <!-- Footer: bagian bawah halaman -->
+  <footer class="bg-dark text-white text-center py-3"> <!-- Footer latar gelap, teks putih, rata tengah, padding vertikal 3-->
+    <p>&copy; 2025 Blog Teknologi</p>
+  </footer>
+
+  <!-- Script untuk efek scroll pada header -->
+  <script>
+    const header = document.querySelector('.header-custom');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('header-hidden'); // Tambah efek blur+fade
+      } else {
+        header.classList.remove('header-hidden'); // Hapus efek jika scroll ke atas
+      }
+    });
+  </script>
+  
+</body>
+</html>
