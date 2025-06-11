@@ -1,19 +1,36 @@
+// Panggil fungsi registerSW() saat halaman dimuat
 registerSW();
 
-// Registers a service worker
+// Fungsi untuk mendaftarkan Service Worker
 async function registerSW() {
+  // Periksa apakah browser mendukung API serviceWorker
   if ('serviceWorker' in navigator) {
     try {
-      // Change the service worker URL to see what happens when the SW doesn't exist
+      // Coba daftarkan file service worker "sw.js"
       const registration = await navigator.serviceWorker.register("sw.js");       
+      
+      // Jika berhasil, kamu bisa tambahkan pesan sukses di sini jika perlu
+      // showResult("Service Worker registered successfully!");
+
     } catch (error) {
+      // Jika terjadi error saat registrasi, tampilkan pesan error
       showResult("Error while registering: " + error.message);
     }    
   } else {
-      showResult("Service workers API not available");
+    // Jika browser tidak mendukung serviceWorker, beri tahu pengguna
+    showResult("Service workers API not available");
   }
 }; 
 
+// Fungsi untuk menampilkan hasil ke elemen HTML <output>
 function showResult(text) {
-  document.querySelector("output").innerHTML = text;
+  // Ambil elemen <output> dari dokumen
+  const output = document.querySelector("output");
+
+  // Pastikan elemen <output> ditemukan sebelum mencoba mengubah isinya
+  if (output) {
+    output.innerHTML = text; // Tampilkan teks ke dalam elemen
+  } else {
+    console.error("Elemen <output> tidak ditemukan di HTML");
+  }
 }
