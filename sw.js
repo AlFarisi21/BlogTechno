@@ -6,13 +6,13 @@ self.addEventListener("install", async event => {
   // Simpan (cache) semua resource berikut saat service worker pertama kali diinstal
   cache.addAll([
     "/",                  // Halaman utama
-    "app.js",             // File JavaScript utama
-    "index.html",         // Halaman index
-    "detail.html",        // Halaman detail 1
-    "detail2.html",       // Halaman detail 2
-    "detail3.html",       // Halaman detail 3
-    "detail4.html",       // Halaman detail 4
-    "logoblog(1).png"     // Gambar/logo yang digunakan
+    "./app.js",             // File JavaScript utama
+    "./index.html",         // Halaman index
+    "./detail.html",        // Halaman detail 1
+    "./detail2.html",       // Halaman detail 2
+    "./detail3.html",       // Halaman detail 3
+    "./detail4.html",       // Halaman detail 4
+    "./logoblog(1).png"     // Gambar/logo yang digunakan
   ]);
 });
 
